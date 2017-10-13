@@ -1,3 +1,7 @@
 dotfiles
 
 handled by zenbu, so variables in the files
+
+also a few scripts in here, either written myself or stolen from various places.
+
+openbox theme is a fork of eti's 'leaves' theme
