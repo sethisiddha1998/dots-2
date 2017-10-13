@@ -1,0 +1,29 @@
+#!/bin/fish
+
+set highlight "%{F{{ n_red }} }"
+set resetColor "%{F#2e2e2e }"
+set g "%{B{{ n_yellow }} }"
+set bg "%{B{{ bgc }} }"
+set transparent "%{B#00FFFFFF}"
+set icon_old ⮕
+set icon ⮕
+pkill -f "mpc idleloop"
+
+set current (mpc current)
+set playing (mpc | string match -r '\[playing\]')
+if test $playing
+  set string "$g   %{A:mpc -q toggle:}"    [playing]"%{A}" $current      "   $bg"
+else
+  set string "$g   %{A:mpc -q toggle:}"    [paused]"%{A}" $current      "   $bg"
+end
+echo $string
+mpc idleloop | while read player
+  set current (mpc current)
+set playing (mpc | string match -r '\[playing\]')
+if test $playing
+  set string "$g   %{A:mpc -q toggle:}"    [playing]"%{A}" $current    "   $bg"
+else
+  set string "$g   %{A:mpc -q toggle:}"    [paused]"%{A}" $current    "   $bg"
+end
+  echo $string
+end

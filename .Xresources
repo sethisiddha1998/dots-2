@@ -1,0 +1,112 @@
+! vim: set filetype=xdefaults :
+
+URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
+! special
+*.borderColor:  {{ bgc }}
+*.background:   {{ bgc }}
+*.foreground:   {{ fgc }}
+*.cursorColor:  {{ csc }}
+
+! Black
+*color0:       {{ n_black }}
+*color8:       {{ b_black }}
+
+! Red
+*color1:       {{ n_red }}
+*color9:       {{ b_red }}
+
+! Green
+*color2:       {{ n_green }}
+*color10:      {{ b_green }}
+
+! Yellow
+*color3:       {{ n_yellow }}
+*color11:      {{ b_yellow }}
+
+! Blue
+*color4:       {{ n_blue }}
+*color12:      {{ b_blue }}
+
+! Magenta
+*color5:       {{ n_magenta }}
+*color13:      {{ b_magenta }}
+
+! Cyan
+*color6:       {{ n_cyan }}
+*color14:      {{ b_cyan }}
+
+! White
+*color7:       {{ n_white }}
+*color15: {{ b_white }}
+
+URxvt.boldFont:
+! ROFI COLORS
+rofi.bg:                {{ bgc }}
+rofi.bg-active:         {{ bgc }}
+rofi.bg-urgent:         {{ bgc }}
+rofi.bgalt:             {{ bgc }}
+rofi.bc:                {{ fgc }}
+rofi.bw:                0
+rofi.fg:                {{ fgc }}
+rofi.fg-active:         {{ fgc }}
+rofi.hlbg:              {{ bgc }}
+rofi.hlbg-active:       {{ bgc }}
+rofi.hlbg-urgent:       {{ bgc }}
+rofi.hlfg:              #ffffff
+rofi.hlfg-active:       #ffffff
+rofi.hlfg-urgent:       #ffffff
+rofi.hide-scrollbar:    true
+rofi.lines:             2
+rofi.separator-style:   none
+rofi.fullscreen:        false
+rofi.padding:           30
+rofi.font:              Dina 8
+rofi.width:             378
+
+URxvt.keysym.M-x           : perl:keyboard-select:activate
+URxvt.keysym.M-u           : perl:url-select:select_next
+URxvt.keysym.M-c           : perl:clipboard:copy
+URxvt.keysym.M-v           : perl:clipboard:paste
+URxvt.keysym.M-s           : perl:keyboard-select:search
+URxvt.keysym.M-C-v         : perl:clipboard:paste_escaped
+URxvt.url-select.launcher  : firefox
+URxvt.url-select.autocopy  : true
+URxvt.url-select.underline : true
+URxvt.internalBorder:  25
+
+!URxvt.font        : -*-lemon-medium-r-*-*-*-*-*-*-m-*-iso10646-1
+URxvt.font         : -gohu-gohufont-medium-r-normal-*-11-80-100-100-c-60-*-*
+!URxvt.font         : -windows-dina-medium-r-normal-*-12-*-*-*-*-*-*-*
+!URxvt.font        : -lucy-tewi-medium-r-normal-*-11-*-*-*-*-*-*-*
+URxvt.termName    : rxvt-256color
+URxvt.iso14755    : false
+!URxvt.letterSpace : -4
+
+URxvt.urgentOnBell: true
+
+URxvt.saveLines   : 12000
+URxvt.scrollBar   : false
+URxvt.scrollstyle : rxvt
+URxvt.geometry    : 45x15
+
+! XFT
+Xft.lcdfilter : lcddefault
+Xft.hintstyle : hintslight
+Xft.hinting   : true
+Xft.antialias : true
+Xft.rgba      : rgb
+
+!Fading
+URxvt.fading    : 0
+URxvt*modifier: alt
+! URxvt.depth: 32
+
+
+rofi.sidebar-mode: true
+rofi.seperator-style: true
+rofi.hide-sidebar: true
+rofi.kb-mode-next: Alt+l
+rofi.kb-mode-previous: Alt+h
+rofi.kb-row-up: Alt+k
+rofi.kb-row-down: Alt+j
+
